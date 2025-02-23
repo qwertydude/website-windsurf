@@ -1,0 +1,60 @@
+---
+const plans = [
+  {
+    name: "Starter",
+    price: "Free",
+    features: [
+      "Basic AI assistance",
+      "Code completion",
+      "Limited projects",
+      "Community support"
+    ]
+  },
+  {
+    name: "Pro",
+    price: "$19/month",
+    features: [
+      "Advanced AI features",
+      "Unlimited projects",
+      "Priority support",
+      "Custom workflows"
+    ]
+  },
+  {
+    name: "Enterprise",
+    price: "Custom",
+    features: [
+      "Custom AI models",
+      "Team collaboration",
+      "Dedicated support",
+      "Custom integrations"
+    ]
+  }
+];
+---
+<section id="pricing" class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center mb-12">Choose Your Plan</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      {plans.map(plan => (
+        <div class="p-8 rounded-lg border hover:shadow-lg transition-shadow">
+          <h3 class="text-2xl font-bold mb-4">{plan.name}</h3>
+          <div class="text-3xl font-bold text-blue-600 mb-6">{plan.price}</div>
+          <ul class="space-y-3 mb-8">
+            {plan.features.map(feature => (
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                {feature}
+              </li>
+            ))}
+          </ul>
+          <a href="#join" class="block w-full text-center bg-blue-600 text-white py-2 rounded-full hover:bg-blue-700 transition-colors">
+            Get Started
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

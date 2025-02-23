@@ -1,0 +1,29 @@
+---
+const features = [
+  {
+    title: "AI-Powered Development",
+    description: "Leverage advanced AI to accelerate your development workflow"
+  },
+  {
+    title: "Intelligent Code Suggestions",
+    description: "Get context-aware code completions and suggestions in real-time"
+  },
+  {
+    title: "Smart Debugging",
+    description: "Debug faster with AI-assisted error detection and resolution"
+  }
+];
+---
+<section id="details" class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center mb-12">Why Choose Windsurf?</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      {features.map(feature => (
+        <div class="p-6 rounded-lg bg-gray-50 hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-semibold mb-4">{feature.title}</h3>
+          <p class="text-gray-600">{feature.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
