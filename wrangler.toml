@@ -1,0 +1,14 @@
+[env.production]
+name = "website-windsurf"
+workers_dev = true
+
+[site]
+bucket = "./dist"
+entry-point = "dist/_worker.js"
+
+[build]
+command = "npm run build"
+watch_dir = "src"
+
+[build.upload]
+format = "service-worker"
